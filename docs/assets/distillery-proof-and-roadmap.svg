@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+  <title id="title">Distillery proof point and rollout plan</title>
+  <desc id="desc">A static diagram showing the current Mezcal Juno proof point and the two-week and four-month rollout path.</desc>
+  <rect width="980" height="560" fill="#ffffff"/>
+  <defs>
+    <style>
+      text { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      .h1 { font-size: 19px; font-weight: 850; fill: #111827; }
+      .sub { font-size: 14px; fill: #6b7280; }
+      .kicker { font-size: 12px; font-weight: 850; text-transform: uppercase; letter-spacing: .08em; }
+      .card-title { font-size: 14px; font-weight: 850; fill: #111827; }
+      .small { font-size: 11.8px; fill: #6b7280; }
+      .body { font-size: 13px; fill: #374151; }
+      .metric { font-size: 28px; font-weight: 900; fill: #047857; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10" fill="none" stroke="#4b5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="70" y="58" class="h1">We already saw the loop work once. Now we industrialize it.</text>
+  <text x="70" y="86" class="sub">Mezcal has a working precedent: agents reacted to a Juno update and brought the explorer back in sync after a 50-block lag.</text>
+
+  <rect x="72" y="124" width="836" height="166" rx="28" fill="#ecfdf5" stroke="#86efac" stroke-width="2.2"/>
+  <text x="108" y="164" class="kicker" fill="#047857">current proof point</text>
+
+  <rect x="108" y="190" width="142" height="52" rx="13" fill="#ffffff" stroke="#a7f3d0" stroke-width="2"/>
+  <text x="179" y="221" text-anchor="middle" class="card-title">Juno update</text>
+  <path d="M260 216 L330 216" stroke="#4b5563" stroke-width="2.4" marker-end="url(#arrow)"/>
+
+  <rect x="342" y="180" width="160" height="72" rx="16" fill="#ffffff" stroke="#a7f3d0" stroke-width="2"/>
+  <text x="422" y="211" text-anchor="middle" class="metric">50</text>
+  <text x="422" y="235" text-anchor="middle" class="small">block lag detected</text>
+  <path d="M514 216 L584 216" stroke="#4b5563" stroke-width="2.4" marker-end="url(#arrow)"/>
+
+  <rect x="596" y="190" width="142" height="52" rx="13" fill="#ffffff" stroke="#a7f3d0" stroke-width="2"/>
+  <text x="667" y="221" text-anchor="middle" class="card-title">Agent update</text>
+  <path d="M748 216 L808 216" stroke="#4b5563" stroke-width="2.4" marker-end="url(#arrow)"/>
+
+  <rect x="820" y="190" width="54" height="52" rx="13" fill="#ffffff" stroke="#a7f3d0" stroke-width="2"/>
+  <text x="847" y="221" text-anchor="middle" class="card-title">CI</text>
+  <text x="108" y="270" class="body">This is the smallest useful proof: source change, freshness gap, agent action, and verified recovery.</text>
+
+  <text x="76" y="340" class="kicker" fill="#1d4ed8">rollout path</text>
+
+  <rect x="72" y="366" width="250" height="128" rx="24" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="102" y="404" class="card-title" fill="#1d4ed8">First 2 weeks</text>
+  <text x="102" y="436" class="body">Run Distillery in testing mode.</text>
+  <text x="102" y="462" class="body">Connect sources, Linear, Slack.</text>
+  <text x="102" y="488" class="body">No auto-merge or deploy.</text>
+
+  <path d="M336 430 L398 430" stroke="#4b5563" stroke-width="2.4" marker-end="url(#arrow)"/>
+
+  <rect x="414" y="366" width="250" height="128" rx="24" fill="#fff7ed" stroke="#f4b46f" stroke-width="2"/>
+  <text x="444" y="404" class="card-title" fill="#b45309">Months 1-3</text>
+  <text x="444" y="436" class="body">Shadow Scarb and Pathfinder.</text>
+  <text x="444" y="462" class="body">Prove fixes through PRs.</text>
+  <text x="444" y="488" class="body">Measure missed-signal rate.</text>
+
+  <path d="M678 430 L740 430" stroke="#4b5563" stroke-width="2.4" marker-end="url(#arrow)"/>
+
+  <rect x="756" y="366" width="152" height="128" rx="24" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="832" y="404" text-anchor="middle" class="card-title" fill="#6d28d9">Month 4</text>
+  <text x="832" y="436" text-anchor="middle" class="body">Ready for</text>
+  <text x="832" y="462" text-anchor="middle" class="body">maintenance</text>
+  <text x="832" y="488" text-anchor="middle" class="body">independence</text>
+
+  <text x="490" y="532" text-anchor="middle" class="small">Decision requested: approve a two-week Distillery test so we can de-risk four-month independence from external maintenance.</text>
+</svg>
