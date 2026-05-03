@@ -1,0 +1,25 @@
+sources:
+  - id: mezcal_main
+    kind: github_repo
+    repo: starknet-innovation/mezcal
+    paths:
+      - rust-exp
+      - webapp
+      - docs
+    affects:
+      - mezcal
+    severity: watch
+    confirmation: internal_ci_required
+
+  - id: starkware_slack_allowlist
+    kind: slack_channels
+    channels:
+      - starkware-announcements
+      - starknet-dev
+      - rpc-and-tooling
+    affects:
+      - pathfinder
+      - scarb
+      - mezcal
+    severity: watch
+    confirmation: official_artifact_required

@@ -1,0 +1,31 @@
+sources:
+  - id: starknet_version_releases
+    kind: docs_page
+    url: https://www.starknet.io/version-releases/
+    affects:
+      - pathfinder
+      - scarb
+      - mezcal
+    severity: high
+    confirmation: official_release_required
+
+  - id: snips
+    kind: docs_page
+    url: https://www.starknet.io/developers/snips/
+    affects:
+      - pathfinder
+      - scarb
+      - mezcal
+    severity: medium
+    confirmation: final_call_or_accepted_required
+
+  - id: starknet_rpc_specs
+    kind: github_repo
+    repo: starkware-libs/starknet-specs
+    paths:
+      - api/starknet_api_openrpc.json
+    affects:
+      - pathfinder
+      - mezcal
+    severity: high
+    confirmation: official_spec_required

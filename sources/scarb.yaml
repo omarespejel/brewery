@@ -1,0 +1,20 @@
+sources:
+  - id: scarb_releases
+    kind: github_releases
+    repo: software-mansion/scarb
+    affects:
+      - scarb
+      - mezcal
+    severity: medium
+    confirmation: tagged_release_required
+
+  - id: scarb_main_branch
+    kind: github_repo
+    repo: software-mansion/scarb
+    paths:
+      - CHANGELOG.md
+      - Cargo.toml
+    affects:
+      - scarb
+    severity: watch
+    confirmation: release_or_changelog_required

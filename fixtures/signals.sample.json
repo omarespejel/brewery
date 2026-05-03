@@ -1,0 +1,30 @@
+[
+  {
+    "id": "sig_rpc_2026_05_02",
+    "sourceId": "starknet_rpc_specs",
+    "sourceKind": "github_file_diff",
+    "type": "rpc_spec_changed",
+    "title": "starknet_api_openrpc.json changed",
+    "evidenceUrl": "https://github.com/starkware-libs/starknet-specs",
+    "affects": ["pathfinder", "mezcal"],
+    "requiredChecks": ["pathfinder rpc tests", "mezcal public-api smoke"]
+  },
+  {
+    "id": "sig_slack_2026_05_02",
+    "sourceId": "starkware_slack_allowlist",
+    "sourceKind": "slack_message",
+    "trustedSource": true,
+    "title": "Trusted StarkWare engineer says RPC compatibility change may land soon",
+    "affects": ["pathfinder", "mezcal"]
+  },
+  {
+    "id": "sig_scarb_2026_05_02",
+    "sourceId": "scarb_releases",
+    "sourceKind": "github_release",
+    "type": "scarb release",
+    "title": "Scarb v2.x released",
+    "evidenceUrl": "https://github.com/software-mansion/scarb/releases",
+    "affects": ["scarb", "mezcal"],
+    "requiredChecks": ["scarb fork CI", "mezcal cairo fixtures"]
+  }
+]

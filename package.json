@@ -1,0 +1,14 @@
+{
+  "name": "brewery",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Maintenance control plane for Starknet infrastructure.",
+  "scripts": {
+    "test": "node --test",
+    "classify:sample": "node scripts/classify-sample.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,18 @@
+sources:
+  - id: cairo_releases
+    kind: github_releases
+    repo: starkware-libs/cairo
+    affects:
+      - scarb
+      - pathfinder
+      - mezcal
+    severity: medium
+    confirmation: tagged_release_required
+
+  - id: cairo_compiler_docs
+    kind: docs_page
+    url: https://github.com/starkware-libs/cairo
+    affects:
+      - scarb
+    severity: medium
+    confirmation: official_docs_required

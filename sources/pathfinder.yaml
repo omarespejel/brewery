@@ -1,0 +1,21 @@
+sources:
+  - id: pathfinder_releases
+    kind: github_releases
+    repo: eqlabs/pathfinder
+    affects:
+      - pathfinder
+      - mezcal
+    severity: medium
+    confirmation: tagged_release_required
+
+  - id: pathfinder_main_branch
+    kind: github_repo
+    repo: eqlabs/pathfinder
+    paths:
+      - crates/rpc/src
+      - crates/pathfinder/src
+      - Cargo.toml
+    affects:
+      - pathfinder
+    severity: watch
+    confirmation: release_or_linked_issue_required
